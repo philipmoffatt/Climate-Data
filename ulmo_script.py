@@ -15,6 +15,12 @@ import numpy as np
 import pandas
 import matplotlib.pyplot as plt
 
+# Call for catalog for different services; can use a bounding box to look at particular areas
+# (min_longitude, min_latitude,max_longitude, and max_latitude) with these values in decimal degrees
+# Chapter 5 of the ulmo documentation dives into each API and how to pull from it. 
+# here I use the coordinates roughly for the PNW; CUSAHSI are water related products/climate change data (type-list)
+ulmo.cuahsi.his_central.get_services(bbox = (-124.0, 42.0, -116.0, 48.0) )
+
 # National Climatic Data Center Global Historical Climate Network - Daily dataset
 # st = station table, pulled for all the US stations here
 st = ulmo.ncdc.ghcn_daily.get_stations(country='US', as_dataframe=True)
