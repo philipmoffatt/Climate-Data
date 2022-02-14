@@ -165,12 +165,12 @@ plt.title('Arctic Oscillation - Rolling Annual Variance')
 # set figure size
 plt.figure( figsize = ( 12, 5))
   
-# plot using rolling average
-AO.rolling(window=12, center=False).mean().plot(style='b--')
-  
 # plot a simple time series plot
 AO.plot(style= 'y-')
-  
+
+# plot using rolling average
+AO.rolling(window=12, center=False).mean().plot(style='b--')
+
 plt.ylabel('Arctic Oscillation Index')
 plt.title('Arctic Oscillation NOAA - Historical Record')
 
